@@ -2,7 +2,7 @@ package ARRAY;
 
 import java.util.Scanner;
 
-public class Arrayss {
+public class Arrayss{
 
     Scanner scanner =new Scanner(System.in);
 
@@ -45,6 +45,35 @@ public class Arrayss {
          a[i] = a[i + 1];
         a[a.length - 1] = Integer.MIN_VALUE;
     }
+public int linearSearch(int[]a,int svalue) {
+    for (int i = 0; i < a.length; i++) {
+        if (svalue == a[i]) return i;
+    }
+    return -1;
+}
+    public int BinarySearch(int[]a,int svalue,int findex,int lindex) {
+     while (findex<=lindex) {
+      int mid=(findex+lindex)/2;
+      if(svalue==a[mid])
+          return mid;
+         if(svalue>a[mid])
+           findex=mid+1;
+         if(svalue<a[mid])
+             lindex=mid-1;
+     }
+     return -1;
+
+    }
+
+
+
+
+
+
+
+
+
+
 
 }
 
