@@ -45,6 +45,12 @@ public class Arrayss{
          a[i] = a[i + 1];
         a[a.length - 1] = Integer.MIN_VALUE;
     }
+
+    public void shiftright_delete(int []a , int index) {
+        for( int i = index;i > a.length;i--)
+            a[i+1] = a[i];
+        a[a.length] = Integer.MIN_VALUE;
+    }
 public int linearSearch(int[]a,int svalue) {
     for (int i = 0; i < a.length; i++) {
         if (svalue == a[i]) return i;
